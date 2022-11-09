@@ -2,14 +2,14 @@ import Email from './email.js'
 import { useState } from 'react'
 
 
-function Emails ({filteredEmails, toggleRead, toggleStar}){
+function Emails ({filteredEmails, toggleRead, toggleStar, setEmails}){
 
 const [showEmail, setShowEmail] = useState('null')
 
  return  <> {showEmail !== 'null' ? 
  <>
  <p>{showEmail.title}</p>
- <button>{'back'}</button>
+ <button onClick={() => {setShowEmail('null')}} >{'back'}</button>
  </> : 
  <ul>
  {filteredEmails.map((email, index) => (

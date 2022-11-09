@@ -91,7 +91,9 @@ function App() {
         </ul>
       </nav>
       <main className="emails">
-        <Emails filteredEmails={filteredEmails} toggleRead={toggleRead} toggleStar={toggleStar} />
+        <Emails 
+        setEmails={setEmails}
+        filteredEmails={filteredEmails} toggleRead={toggleRead} toggleStar={toggleStar} />
       </main>
     </div>
   )
